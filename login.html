@@ -52,7 +52,7 @@
         </div>
     </div>
 
-    <div class="layui-row recommend-list">
+    <div class="layui-row recommend-list" style="margin-bottom: 15px;">
         <div class="layui-col-xs6">
             <div class="layui-card border-bottom">
                 <div class="layui-card-body" style="color: #01AAED">
@@ -95,13 +95,57 @@
         </div>
     </div>
 
-    <div class="layui-row">
+    <div class="layui-row layui-col-space5">
         <div class="layui-col-xs6">
             <div class="layui-card">
                 <div>
-                    <img src="https://img.alicdn.com/bao/uploaded/i4/681267681/TB1YFKdqxSYBuNjSsphXXbGvVXa_!!0-item_pic.jpg_300x300q85s150.jpg_.webp">
+                    <img style="width: 100%"
+                         src="https://gw.alicdn.com/imgextra/i3/14197825/O1CN01aePork27fthGUhEbQ_!!14197825.jpg_360x360xzQ75s100.jpg">
                 </div>
-                <div class="layui-card-body"></div>
+                <div class="layui-card-body">
+                    <h4 class="layui-elip-blank">毛衣裙中长款针织复古格子毛呢假两件连衣裙女秋冬配大衣的长裙子</h4>
+                    <span style="color: #FF5722"><small>￥</small>76</span>
+                    <small class="layui-word-aux" style="float: right;">18677人已付款</small>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-xs6">
+            <div class="layui-card">
+                <div>
+                    <img style="width: 100%"
+                         src="https://gw.alicdn.com/imgextra/i3/14197825/O1CN01aePork27fthGUhEbQ_!!14197825.jpg_360x360xzQ75s100.jpg">
+                </div>
+                <div class="layui-card-body">
+                    <h4 class="layui-elip-blank">毛衣裙中长款针织复古格子毛呢假两件连衣裙女秋冬配大衣的长裙子</h4>
+                    <span style="color: #FF5722"><small>￥</small>76</span>
+                    <small class="layui-word-aux" style="float: right;">18677人已付款</small>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-xs6">
+            <div class="layui-card">
+                <div>
+                    <img style="width: 100%"
+                         src="https://gw.alicdn.com/imgextra/i3/14197825/O1CN01aePork27fthGUhEbQ_!!14197825.jpg_360x360xzQ75s100.jpg">
+                </div>
+                <div class="layui-card-body">
+                    <h4 class="layui-elip-blank">毛衣裙中长款针织复古格子毛呢假两件连衣裙女秋冬配大衣的长裙子</h4>
+                    <span style="color: #FF5722"><small>￥</small>76</span>
+                    <small class="layui-word-aux" style="float: right;">18677人已付款</small>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-xs6">
+            <div class="layui-card">
+                <div>
+                    <img style="width: 100%"
+                         src="https://gw.alicdn.com/imgextra/i3/14197825/O1CN01aePork27fthGUhEbQ_!!14197825.jpg_360x360xzQ75s100.jpg">
+                </div>
+                <div class="layui-card-body">
+                    <h4 class="layui-elip-blank">毛衣裙中长款针织复古格子毛呢假两件连衣裙女秋冬配大衣的长裙子</h4>
+                    <span style="color: #FF5722"><small>￥</small>76</span>
+                    <small class="layui-word-aux" style="float: right;">18677人已付款</small>
+                </div>
             </div>
         </div>
     </div>
@@ -141,6 +185,9 @@
 
     $('.nav-bottom a').click(function () {
         event.preventDefault();
+        if ($(this).children('.iconfont').data('no-xx') === 'yes') {
+            return true;
+        }
         let icon = $(this).children('.iconfont').attr('class');
         icon = icon.replace('-xianxing', '');
         $('.nav-bottom .iconfont').each(function () {
