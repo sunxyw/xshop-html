@@ -1,3 +1,7 @@
+main {
+    margin-bottom: 53px;
+}
+
 .nav-top {
     border-radius: 0;
     height: 48px;
@@ -21,9 +25,10 @@
 }
 
 .nav-bottom {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
+    height: 53px;
     border-radius: 0;
     background-color: #fff;
     border-top: 1px solid #eee;
@@ -31,7 +36,11 @@
     max-width: 100%;
 }
 
-.nav-bottom .layui-nav-item a {
+.nav-bottom .layui-nav-item::after, .nav-bottom .layui-nav-bar {
+    display: none;
+}
+
+.nav-bottom .layui-nav-item a, .nav-bottom .layui-this a, .nav-bottom .layui-nav-item a:hover {
     color: #000;
     line-height: 48px;
 }
