@@ -57,3 +57,39 @@ div[carousel-item] > * {
 .bg-gradient-red {
     background: linear-gradient(87deg, #f5365c 0, #f56036 100%) !important;
 }
+
+.bg-gradient-indigo {
+    background: linear-gradient(87deg, #5603ad 0, #9d03ad 100%) !important;
+}
+
+.bg-gradient-teal {
+    background: linear-gradient(87deg, #11cdef 0, #1171ef 100%) !important;
+}
+
+.bg-gradient-green {
+    background: linear-gradient(87deg, #2dce89 0, #2dcecc 100%) !important;
+}
+
+.bg-gradient-blue {
+    background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%) !important;
+}
+
+i.icon-round {
+    border-radius: 50%;
+    padding: 8px;
+    font-size: 32px;
+    color: #fff;
+}
+
+.recommend-list .layui-card {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.recommend-list .layui-card {
+    border-right: 1px solid #eee;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #eee;
+}
