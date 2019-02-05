@@ -1,0 +1,59 @@
+.nav-top {
+    border-radius: 0;
+    height: 48px;
+}
+
+.nav-top .layui-nav-item {
+    line-height: 48px;
+}
+
+.nav-top-search {
+    margin-left: 20px;
+}
+
+.nav-top-search input {
+    background-color: rgba(255, 255, 255, .3);
+    border: none;
+}
+
+.nav-top-search input::placeholder {
+    color: #eee;
+}
+
+.nav-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-radius: 0;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+    max-width: 100%;
+}
+
+.nav-bottom .layui-nav-item a {
+    color: #000;
+    line-height: 48px;
+}
+
+.nav-bottom .layui-nav-item a .iconfont {
+    font-size: 24px;
+}
+
+div[carousel-item] > *:nth-child(2n+1) {
+    background-color: #009688;
+}
+
+div[carousel-item] > *:nth-child(2n) {
+    background-color: #5FB878;
+}
+
+div[carousel-item] > * {
+    text-align: center;
+    line-height: 220px;
+    color: #fff;
+}
+
+.bg-gradient-red {
+    background: linear-gradient(87deg, #f5365c 0, #f56036 100%) !important;
+}
