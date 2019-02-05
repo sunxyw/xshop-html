@@ -40,7 +40,8 @@ main {
     max-width: 100%;
 }
 
-.nav-bottom .layui-nav-item::after, .nav-bottom .layui-nav-bar {
+/* 隐藏选择条 */
+.layui-nav-item::after, .layui-nav-bar {
     display: none;
 }
 
