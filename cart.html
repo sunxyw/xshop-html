@@ -28,13 +28,28 @@
     <div class="layui-card" style="margin-top: 15px;">
         <div class="layui-card-body">
             <ul>
-                <li class="layui-row layui-col-space10">
-                    <div class="layui-col-xs3">
-                        <img width="100%"
-                            src="https://gw.alicdn.com/imgextra/i3/14197825/O1CN01aePork27fthGUhEbQ_!!14197825.jpg_360x360xzQ75s100.jpg">
+                <li class="">
+                    <div class="select-circle">
+                        <i class="iconfont icon-Raidobox-weixuan" style="margin: auto;"></i>
                     </div>
-                    <div class="layui-col-xs9">
-                        <h4 class="layui-elip-blank">毛衣裙中长款针织复古格子毛呢假两件连衣裙女秋冬配大衣的长裙子</h4>
+                    <div class="layui-row layui-col-space10" style="margin-left: 20px">
+                        <div class="layui-col-xs3">
+                            <img width="100%"
+                                 src="https://gw.alicdn.com/imgextra/i3/14197825/O1CN01aePork27fthGUhEbQ_!!14197825.jpg_360x360xzQ75s100.jpg">
+                        </div>
+                        <div class="layui-col-xs9">
+                            <h4 class="layui-elip-blank">毛衣裙中长款针织复古格子毛呢假两件连衣裙女秋冬配大衣的长裙子</h4>
+                            <span class="layui-badge layui-bg-gray">红色;长;M</span>
+                            <span class="layui-badge">春节特价</span>
+                            <div>
+                                <span style="color: #FF5722"><small>￥</small>76</span>
+                                <div style="float: right">
+                                    <i class="iconfont icon-jian"></i>
+                                    <b style="font-size: 20px;padding: 0 8px;">3</b>
+                                    <i class="iconfont icon-jia"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </li>
             </ul>
@@ -79,6 +94,12 @@
             $(this).attr('class', cl);
         });
         $(this).children('.iconfont').attr('class', icon);
+    });
+
+    $('.select-circle').click(function () {
+        $(this).children('.iconfont')
+            .toggleClass('icon-Raidobox-weixuan')
+            .toggleClass('icon-zhengquewancheng-yuankuang');
     });
 </script>
 </body>

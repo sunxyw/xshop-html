@@ -126,3 +126,12 @@ i.icon-round {
 * {
     max-width: 100vw;
 }
+
+.select-circle {
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    text-align: center;
+    top: -3px;
+}
