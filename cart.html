@@ -69,7 +69,9 @@
                             合计：
                             <span style="color: #FF5722" id="total"><small>￥</small>0</span>
                         </label>
-                        <button class="layui-btn layui-btn-danger btn-create-order" type="button" style="border-radius: 0">结算</button>
+                        <button class="layui-btn layui-btn-danger btn-create-order" type="button"
+                                style="border-radius: 0">结算
+                        </button>
                     </div>
                 </div>
             </div>
@@ -96,26 +98,9 @@
 </ul>
 
 <script src="layui/layui.all.js"></script>
+<script src="js/app.js"></script>
 <script>
-    let element = layui.element,
-        form = layui.form,
-        $ = layui.$;
-
-    $('.nav-bottom a').click(function () {
-        if ($(this).children('.iconfont').data('no-xx') === 'yes') {
-            return true;
-        }
-        let icon = $(this).children('.iconfont').attr('class');
-        icon = icon.replace('-xianxing', '');
-        $('.nav-bottom .iconfont').each(function () {
-            let cl = $(this).attr('class');
-            if (cl.search('-xianxing') === -1 && $(this).data('no-xx') !== 'yes') {
-                cl = cl + '-xianxing';
-            }
-            $(this).attr('class', cl);
-        });
-        $(this).children('.iconfont').attr('class', icon);
-    });
+    let form = layui.form;
 
     form.on('checkbox(select)', function (cb) {
         let items = getItems();
