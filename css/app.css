@@ -22,6 +22,7 @@ main {
 .nav-top-search input {
     background-color: rgba(255, 255, 255, .3);
     border: none;
+    color: #eee;
 }
 
 .nav-top-search input::placeholder {
@@ -52,6 +53,16 @@ main {
 
 .nav-bottom .layui-nav-item a .iconfont {
     font-size: 24px;
+}
+
+.bottom-bar {
+    position: fixed;
+    bottom: 53px;
+    width: 100%;
+}
+
+.bottom-bar * {
+    margin-bottom: 0 !important;
 }
 
 div[carousel-item] > *:nth-child(2n+1) {
@@ -114,6 +125,12 @@ i.icon-round {
     white-space: nowrap;
 }
 
+.layui-no-elip {
+    white-space: nowrap;
+    text-overflow: unset;
+    overflow: visible !important;
+}
+
 .layui-col-space5 > *:nth-child(2n) {
     padding-right: 0;
     right: -2.5px;
@@ -138,4 +155,17 @@ i.icon-round {
 
 .red-text {
     color: #FF5722;
+}
+
+input[type=search]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+
+    position: relative;
+    height: 20px;
+    width: 20px;
+    right: 3px;
+    border-radius: 50%;
+    background-image: url("../images/close.svg");
+    background-position: center;
+    background-size: contain;
 }
