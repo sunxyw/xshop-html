@@ -203,6 +203,11 @@ input[type=search]::-webkit-search-cancel-button {
 .list-nav .right-link {
     float: right;
     color: #ddd;
+    padding-right: 10px;
+}
+
+.right-link i {
+    margin-right: 0 !important;
 }
 
 .z-depth-1 {
@@ -224,4 +229,13 @@ input[type=search]::-webkit-search-cancel-button {
 .product-action .layui-btn:nth-child(1) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+}
+
+.layui-badge.active {
+    background-color: #5FB878 !important;
+    color: #fff !important;
+}
+
+.layui-badge {
+    transition: all .3s;
 }

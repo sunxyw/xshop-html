@@ -52,9 +52,13 @@
 
     <div class="layui-card">
         <div class="layui-card-body">
+            <div class="skus" style="margin-bottom: 5px;">
+                <span class="layui-badge layui-bg-gray active" data-sku="1">红色;长;M</span>
+                <span class="layui-badge layui-bg-gray" data-sku="2">黑色;长;M</span>
+            </div>
             <div class="layui-row product-action">
                 <div class="layui-col-xs6">
-                    <button class="layui-btn bg-gradient-red layui-btn-fluid">加入购物车</button>
+                    <button class="layui-btn bg-gradient-red layui-btn-fluid" id="add_cart">加入购物车</button>
                 </div>
                 <div class="layui-col-xs6">
                     <button class="layui-btn bg-gradient-red-inverse layui-btn-fluid">立即购买</button>
@@ -62,6 +66,8 @@
             </div>
         </div>
     </div>
+
+    <input type="hidden" id="sku">
 </main>
 
 <ul class="layui-nav nav-bottom">
@@ -93,6 +99,16 @@
         height: '400px',
         arrow: 'always',
         anim: 'default'
+    });
+
+    $('.skus span').click(function () {
+        $('.skus span').removeClass('active');
+        $(this).addClass('active');
+        $('#sku').val($(this).data('sku'));
+    });
+
+    $('#add_cart').click(function () {
+        alert($('[data-sku="' + $('#sku').val() + '"]').text());
     });
 </script>
 </body>
