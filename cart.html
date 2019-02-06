@@ -28,8 +28,8 @@
     <div class="layui-card" style="margin-top: 15px;">
         <div class="layui-card-body">
             <ul>
-                <li class="">
-                    <div class="select-circle">
+                <li data-pid="1" data-amount="3">
+                    <div class="select-circle" data-selected="no">
                         <i class="iconfont icon-Raidobox-weixuan" style="margin: auto;"></i>
                     </div>
                     <div class="layui-row layui-col-space10" style="margin-left: 20px">
@@ -42,8 +42,8 @@
                             <span class="layui-badge layui-bg-gray">红色;长;M</span>
                             <span class="layui-badge">春节特价</span>
                             <div>
-                                <span style="color: #FF5722"><small>￥</small>76</span>
-                                <div style="float: right">
+                                <span style="color: #FF5722" class="cost"><small>￥</small>76</span>
+                                <div style="float: right" class="amount-controls">
                                     <i class="iconfont icon-jian"></i>
                                     <b style="font-size: 20px;padding: 0 8px;">3</b>
                                     <i class="iconfont icon-jia"></i>
@@ -54,6 +54,20 @@
                 </li>
             </ul>
         </div>
+    </div>
+
+    <div class="layui-card">
+        <form class="layui-form" action="">
+            <div class="layui-form-item">
+                <div class="layui-inline" style="padding-left: 15px;">
+                    <input type="checkbox" name="" title="全选" lay-skin="primary" style="float: left;">
+                    <div style="float: right">
+                        <label class="layui-form-label">合计：<span style="color: #FF5722" id="total"><small>￥</small>76</span></label>
+                        <button class="layui-btn layui-btn-danger" style="border-radius: 0">结算</button>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
 </main>
 
@@ -96,10 +110,28 @@
         $(this).children('.iconfont').attr('class', icon);
     });
 
+    let items = [];
+
     $('.select-circle').click(function () {
         $(this).children('.iconfont')
             .toggleClass('icon-Raidobox-weixuan')
-            .toggleClass('icon-zhengquewancheng-yuankuang');
+            .toggleClass('icon-zhengquewancheng-yuankuang')
+            .toggleClass('red-text');
+        let total = 0;
+        if ($(this).data('selected') === 'yes') {
+            $(this).data('selected', 'no');
+            items.slice($(this).parent('li').data('pid'), 1);
+        } else {
+            items[$(this).parent('li').data('pid')] = {
+                pid: $(this).parent('li').data('pid'),
+                cost: parseFloat($(this).parent('li').find('.cost').text().replace('￥', '')),
+                amount: $(this).parent('li').data('amount')
+            };
+            items.forEach(function (item) {
+                total = total + (item.cost * item.amount);
+            });
+        }
+        $('#total').html('<small>￥</small>' + total);
     });
 </script>
 </body>
